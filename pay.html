@@ -92,7 +92,7 @@
                         });
                         //3.2开启定时任务，查询付款状态
                         const taskId = setInterval(() => {
-                            ly.http.get("/order/state" + this.orderId).then(resp => {
+                            ly.http.get("/order/state/" + this.orderId).then(resp => {
                                 let i = resp.data;
                                 if (i === 1){
                                     //3.3 付款成功
